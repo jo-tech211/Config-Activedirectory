@@ -86,3 +86,90 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 <img src="https://i.imgur.com/AjdrBIa.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
+
+- The next step is to go into DC-1 and activate Active Directory Domain Services
+- We set ourselves as Domain Controller, select new forest option, next to root domain name type: mydomain.com
+
+<p>
+<img src="https://i.imgur.com/S4uwvrJ.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/r059qJw.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+
+- Within Active Directory we must now set up Organizational units (OU)
+- Create two new (OU'S) under _EMPLOYEEES and _ADMINS
+- After this, we will create a new user named Jane Doe with the username jess_admin and corresponding password
+- jess_admin will be added to the "Domain Admins Security Group"
+
+<p>
+<img src="https://i.imgur.com/xPzGVie.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/pVcn7lD.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/EDigqHl.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+- In the next part we will now have to log into Client-1 VM with the credentials of mydomain.com\jane_admin
+- We will add client-1 to the domain
+
+<p>
+<img src="https://i.imgur.com/Fjr2LkY.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/t6ihpXQ.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+- Go to system properties, rename this PC, enter domain name, select ok, and apply
+- Client-1 is officially part of the domain 💫
+
+<p>
+<img src="https://i.imgur.com/QqRuP2x.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/SHbpsgW.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+# Creating Users and Logging in with any User 💥💥💥
+
+- Make sure to log into Dc-1 as jess_admin, run powershell ISE as an administrator
+- We will create users with Powershell ISE within the domain controller (DC-1)
+
+<p>
+<img src="https://i.imgur.com/4wDeELo.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+- Now create a new file and add the pre-configured script that will be loaded unto Powershell
+- When we start the script, random users will begin to be created!
+ 
+<p>
+<img src="https://i.imgur.com/Dg25O4T.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+- Let's log in with a random user into client-1 that was created!
+
+<p>
+<img src="https://i.imgur.com/QhQ2vkn.png" height="50%" width="50%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+
+## That's all Folks!!!🚀✨✨
