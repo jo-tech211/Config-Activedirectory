@@ -23,10 +23,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Domain Controller VM (Windows Server 2022) named “DC-1”
+- Domain Controller’s NIC Private IP address to be static
+- ICMPv4 (ping) was allowed on the Domain Controller
+- Create an Admin and Normal User Account in Active Directory
+- Join Client to domain
+- Attempt to login Client-1 with one of the users
 
 <h2>Deployment and Configuration Steps</h2>
 
